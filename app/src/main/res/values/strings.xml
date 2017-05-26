@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AndroidSheetsAndRoller</string>
+    <string name="app_name">Sheets and Dice Roller</string>
+    <string name="title">Sheets and Dice Roller</string>
+    <string name = "author"> ThirdSpare</string>
 </resources>
