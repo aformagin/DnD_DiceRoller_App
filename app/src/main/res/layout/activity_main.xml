@@ -33,12 +33,12 @@
         android:layout_gravity="center_horizontal"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnDice"
-            android:layout_width="@dimen/MainScreenBTN"
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:paddingLeft="35dp"
             android:layout_height="wrap_content"
-            android:text="DICE"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+            android:background="@null"
+            android:src="@drawable/dicebutton" />
 
 
         <Button
