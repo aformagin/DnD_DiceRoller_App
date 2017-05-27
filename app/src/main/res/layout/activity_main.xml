@@ -35,10 +35,11 @@
 
         <ImageButton
             android:layout_width="wrap_content"
-            android:paddingLeft="35dp"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:src="@drawable/dicebutton" />
+            android:onClick="showDiceScreen"
+            android:paddingLeft="35dp"
+            android:src="@drawable/dicebutton"/>
 
 
         <Button
