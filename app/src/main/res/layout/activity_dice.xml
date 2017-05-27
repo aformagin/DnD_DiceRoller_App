@@ -1,8 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnD4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rollD4"
+                android:text="D4" />
+
+            <Button
+                android:id="@+id/btnD6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rollD6"
+                android:text="D6" />
+
+            <Button
+                android:id="@+id/btnD8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rollD8"
+                android:text="D8" />
+
+            <Button
+                android:id="@+id/btnD10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rollD8"
+                android:text="D10" />
+
+            <Button
+                android:id="@+id/btnD12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rollD12"
+                android:text="D12" />
+            <Button
+                android:id="@+id/btnD20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="rollD20"
+                android:text="D20" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtD4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="11dp"
+                android:text=" 0 "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+            <TextView
+                android:id="@+id/txtD6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text=" 0 "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+            <TextView
+                android:id="@+id/txtD8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="19dp"
+                android:text=" 0 "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+            <TextView
+                android:id="@+id/txtD10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="18dp"
+                android:text=" 0 "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+            <TextView
+                android:id="@+id/txtD12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="18dp"
+                android:text=" 0 "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+            <TextView
+                android:id="@+id/txtD20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="18dp"
+                android:text=" 0 "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>
