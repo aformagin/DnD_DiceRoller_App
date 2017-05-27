@@ -13,8 +13,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="@string/app_name"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:text="Dice Roller"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
     </LinearLayout>
 
     <LinearLayout
@@ -38,7 +41,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="rollD4"
-                    android:text="D4" />
+                    android:text="D4"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txtD4"
@@ -60,7 +64,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="rollD6"
-                    android:text="D6" />
+                    android:text="D6"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/txtD6"
@@ -81,7 +86,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="rollD8"
-                    android:text="D8" />
+                    android:text="D8"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/txtD8"
@@ -104,7 +110,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="rollD10"
-                    android:text="D10" />
+                    android:text="D10"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/txtD10"
@@ -126,7 +133,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="rollD12"
-                    android:text="D12" />
+                    android:text="D12"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/txtD12"
@@ -149,7 +157,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="rollD20"
-                    android:text="D20" />
+                    android:text="D20"
+                    android:textStyle="bold"/>
 
                 <TextView
                     android:id="@+id/txtD20"
