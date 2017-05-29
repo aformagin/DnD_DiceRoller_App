@@ -5,6 +5,7 @@ package com.thirdspare.android.androidsheetsandroller;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 //Types of die
@@ -24,56 +25,76 @@ public class DiceActivity extends Activity {
 
     }
 
-    public void rollD4(View view){
+    public void rollD4(View view) {
         int num = 0;
 
-        num = (int) (Math.random () * (4 - 1+ 1) + 1);
+        num = (int) (Math.random() * (4 - 1 + 1) + 1);
 
-        TextView dice = (TextView)(findViewById(R.id.txtD4));
+        TextView dice = (TextView) (findViewById(R.id.txtD4));
         dice.setText(Integer.toString(num));
-       // return num;
+        // return num;
 
     }
 
-    public void rollD6(View view){
+    //Classic 6 sided die
+    public void rollD6(View view) {
+
+        int num = 0;
+        String modValue;
+
+        //Randomly generates a number ot be placed in the dice result field
+        num = (int) (Math.random() * (6 - 1 + 1) + 1);
+
+        //Gets the modifier so it can be added to the num
+        EditText diceMod = (EditText) findViewById(R.id.edtD6);
+        TextView dice = (TextView) (findViewById(R.id.txtD6));
+
+        modValue = diceMod.getText().toString();
+        int mod = Integer.parseInt(modValue);
+        if (diceMod.getText() == null){
+            diceMod.setText("0");
+        }
+
+
+
+
+
+        dice.setText(Integer.toString(num + mod));
+    }
+
+    public void rollD8(View view) {
         int num = 0;
 
-        num = (int) (Math.random () * (6 - 1+ 1) + 1);
+        num = (int) (Math.random() * (8 - 1 + 1) + 1);
 
-        TextView dice = (TextView)(findViewById(R.id.txtD6));
+        TextView dice = (TextView) (findViewById(R.id.txtD8));
         dice.setText(Integer.toString(num));
     }
 
-    public void rollD8(View view){
+    public void rollD10(View view) {
         int num = 0;
 
-        num = (int) (Math.random () * (8 - 1+ 1) + 1);
+        num = (int) (Math.random() * (10 - 1 + 1) + 1);
 
-        TextView dice = (TextView)(findViewById(R.id.txtD8));
+        TextView dice = (TextView) (findViewById(R.id.txtD10));
         dice.setText(Integer.toString(num));
     }
-    public void rollD10(View view){
+
+    public void rollD12(View view) {
         int num = 0;
 
-        num = (int) (Math.random () * (10 - 1+ 1) + 1);
+        num = (int) (Math.random() * (12 - 1 + 1) + 1);
 
-        TextView dice = (TextView)(findViewById(R.id.txtD10));
+        TextView dice = (TextView) (findViewById(R.id.txtD12));
         dice.setText(Integer.toString(num));
     }
-    public void rollD12(View view){
+
+    public void rollD20(View view) {
         int num = 0;
 
-        num = (int) (Math.random () * (12 - 1+ 1) + 1);
+        num = (int) (Math.random() * (20 - 1 + 1) + 1);
 
-        TextView dice = (TextView)(findViewById(R.id.txtD12));
-        dice.setText(Integer.toString(num));
-    }
-    public void rollD20(View view){
-        int num = 0;
-
-        num = (int) (Math.random () * (20 - 1+ 1) + 1);
-
-        TextView dice = (TextView)(findViewById(R.id.txtD20));
+        TextView dice = (TextView) (findViewById(R.id.txtD20));
         dice.setText(Integer.toString(num));
     }
 }
