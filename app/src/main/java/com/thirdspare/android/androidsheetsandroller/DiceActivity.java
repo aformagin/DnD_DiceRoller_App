@@ -5,7 +5,6 @@ package com.thirdspare.android.androidsheetsandroller;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.TextView;
 
 //Types of die
@@ -46,20 +45,20 @@ public class DiceActivity extends Activity {
         num = (int) (Math.random() * (6 - 1 + 1) + 1);
 
         //Gets the modifier so it can be added to the num
-        EditText diceMod = (EditText) findViewById(R.id.edtD6);
+        //EditText diceMod = (EditText) findViewById(R.id.edtD6);
         TextView dice = (TextView) (findViewById(R.id.txtD6));
 
-        modValue = diceMod.getText().toString();
-        int mod = Integer.parseInt(modValue);
+        //modValue = diceMod.getText().toString();
+       /* int mod = Integer.parseInt(modValue);
         if (diceMod.getText() == null){
             diceMod.setText("0");
-        }
+        }*/
 
 
 
 
 
-        dice.setText(Integer.toString(num + mod));
+        dice.setText(Integer.toString(num));
     }
 
     public void rollD8(View view) {
