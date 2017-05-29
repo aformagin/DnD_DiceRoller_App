@@ -2,4 +2,14 @@
     <string name="app_name">Sheets and Dice Roller</string>
     <string name="title">Sheets and Dice Roller</string>
     <string name = "author"> ThirdSpare</string>
+    <string name="help">HELP</string>
+    <string name="add1">+1</string>
+    <string name="minus1">-1</string>
+    <string name="D4">D4</string>
+    <string name="D6">D6</string>
+    <string name="D8">D8</string>
+    <string name="D10">D10</string>
+    <string name="D12">D12</string>
+    <string name="D20">D20</string>
+    <string name="Percent">% Roll</string>
 </resources>

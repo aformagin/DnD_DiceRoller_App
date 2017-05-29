@@ -24,17 +24,35 @@ public class DiceActivity extends Activity {
 
     }
 
+    ////////////////////////////////////////////////////////////////////////////
+    //FOUR SIDED DIE
+    ////////////////////////////////////////////////////////////////////////////
     public void rollD4(View view) {
         int num = 0;
-
         num = (int) (Math.random() * (4 - 1 + 1) + 1);
-
         TextView dice = (TextView) (findViewById(R.id.txtD4));
         dice.setText(Integer.toString(num));
-        // return num;
-
+    }
+    public void modAddD4(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD4M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num++;
+        diceMod.setText(Integer.toString(num));
     }
 
+    public void modSubD4(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD4M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num--;
+        diceMod.setText(Integer.toString(num));
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    //SIX SIDED DIE
+    ////////////////////////////////////////////////////////////////////////////
     //Classic 6 sided die
     public void rollD6(View view) {
 
@@ -45,22 +63,39 @@ public class DiceActivity extends Activity {
         num = (int) (Math.random() * (6 - 1 + 1) + 1);
 
         //Gets the modifier so it can be added to the num
-        //EditText diceMod = (EditText) findViewById(R.id.edtD6);
+        TextView diceMod = (TextView) findViewById(R.id.txtD6M);
         TextView dice = (TextView) (findViewById(R.id.txtD6));
-
-        //modValue = diceMod.getText().toString();
-       /* int mod = Integer.parseInt(modValue);
-        if (diceMod.getText() == null){
+        modValue = diceMod.getText().toString();
+        int mod = Integer.parseInt(modValue);
+        if (diceMod.getText() == null) {
             diceMod.setText("0");
-        }*/
+        }
 
 
-
-
-
-        dice.setText(Integer.toString(num));
+        dice.setText(Integer.toString(num + mod));
     }
 
+
+    public void modAddD6(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD6M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num++;
+        diceMod.setText(Integer.toString(num));
+    }
+
+    public void modSubD6(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD6M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num--;
+        diceMod.setText(Integer.toString(num));
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    //EIGHT SIDED DIE
+    ////////////////////////////////////////////////////////////////////////////
     public void rollD8(View view) {
         int num = 0;
 
@@ -69,7 +104,26 @@ public class DiceActivity extends Activity {
         TextView dice = (TextView) (findViewById(R.id.txtD8));
         dice.setText(Integer.toString(num));
     }
+    public void modAddD8(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD8M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num++;
+        diceMod.setText(Integer.toString(num));
+    }
 
+    public void modSubD8(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD8M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num--;
+        diceMod.setText(Integer.toString(num));
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    //TEN SIDED DIE
+    ////////////////////////////////////////////////////////////////////////////
     public void rollD10(View view) {
         int num = 0;
 
@@ -78,7 +132,26 @@ public class DiceActivity extends Activity {
         TextView dice = (TextView) (findViewById(R.id.txtD10));
         dice.setText(Integer.toString(num));
     }
+    public void modAddD10(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD10M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num++;
+        diceMod.setText(Integer.toString(num));
+    }
 
+    public void modSubD10(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD10M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num--;
+        diceMod.setText(Integer.toString(num));
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    //TWELVE SIDED DIE
+    ////////////////////////////////////////////////////////////////////////////
     public void rollD12(View view) {
         int num = 0;
 
@@ -87,7 +160,26 @@ public class DiceActivity extends Activity {
         TextView dice = (TextView) (findViewById(R.id.txtD12));
         dice.setText(Integer.toString(num));
     }
+    public void modAddD12(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD12M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num++;
+        diceMod.setText(Integer.toString(num));
+    }
 
+    public void modSubD12(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD12M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num--;
+        diceMod.setText(Integer.toString(num));
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    //TWENTY SIDED DIE
+    ////////////////////////////////////////////////////////////////////////////
     public void rollD20(View view) {
         int num = 0;
 
@@ -96,4 +188,42 @@ public class DiceActivity extends Activity {
         TextView dice = (TextView) (findViewById(R.id.txtD20));
         dice.setText(Integer.toString(num));
     }
+    public void modAddD20(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD20M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num++;
+        diceMod.setText(Integer.toString(num));
+    }
+
+    public void modSubD20(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtD20M);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num--;
+        diceMod.setText(Integer.toString(num));
+    }
+    ////////////////////////////////////////////////////////////////////////////
+    //PERCENTILE SIDED DIE
+    ////////////////////////////////////////////////////////////////////////////
+/*
+    public void modAddPercent(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtDPercentM);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num++;
+        diceMod.setText(Integer.toString(num));
+    }
+
+    public void modSubPercent(View view) {
+        String modValue;
+        TextView diceMod = (TextView) findViewById(R.id.txtDPercentM);
+        modValue = diceMod.getText().toString();
+        int num = Integer.parseInt(modValue);
+        num--;
+        diceMod.setText(Integer.toString(num));
+    }*/
 }
