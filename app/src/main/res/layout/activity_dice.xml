@@ -51,6 +51,10 @@
                     android:paddingLeft="25dp"
                     android:text="0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="100dp"/>
 
             </LinearLayout>
 
@@ -74,6 +78,11 @@
                     android:paddingLeft="25dp"
                     android:text="0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="100dp"/>
+
             </LinearLayout>
 
             <LinearLayout
@@ -96,6 +105,11 @@
                     android:paddingLeft="25dp"
                     android:text="0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="100dp"/>
+
 
 
             </LinearLayout>
@@ -120,6 +134,11 @@
                     android:paddingLeft="25dp"
                     android:text="0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="100dp"/>
+
 
             </LinearLayout>
 
@@ -143,6 +162,11 @@
                     android:paddingLeft="25dp"
                     android:text="0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="100dp"/>
+
 
             </LinearLayout>
 
@@ -167,6 +191,11 @@
                     android:paddingLeft="25dp"
                     android:text="0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+                <EditText
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="100dp"/>
+
 
 
             </LinearLayout>
