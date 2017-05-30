@@ -19,12 +19,12 @@
 
     <!--Abilities-->
     <string name="abil">Ability Scores</string>
-    <string name="STR">Strength</string>
-    <string name="DEX">Dexterity</string>
-    <string name="CON">Constitution</string>
-    <string name="INT">Intelligence</string>
-    <string name="WIS">Wisdom</string>
-    <string name="CHA">Charisma</string>
+    <string name="STR">STR</string>
+    <string name="DEX">DEX</string>
+    <string name="CON">CON</string>
+    <string name="INT">INT</string>
+    <string name="WIS">WIS</string>
+    <string name="CHA">CHA</string>
 
     <!--DICE-->
     <string name="D4">D4</string>

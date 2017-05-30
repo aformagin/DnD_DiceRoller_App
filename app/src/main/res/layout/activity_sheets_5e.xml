@@ -168,7 +168,8 @@
                                         android:id="@+id/btnSTRRoll"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/roll" />
+                                        android:onClick="rollSTR"
+                                        android:text="@string/roll"/>
 
                                     <Space
                                         android:layout_width="@dimen/sheetSpaceMod"
@@ -235,7 +236,8 @@
                                         android:id="@+id/btnDEXRoll"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/roll" />
+                                        android:onClick="rollDEX"
+                                        android:text="@string/roll"/>
 
                                     <Space
                                         android:layout_width="@dimen/sheetSpaceMod"
@@ -302,7 +304,8 @@
                                         android:id="@+id/btnCONRoll"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/roll" />
+                                        android:onClick="rollCON"
+                                        android:text="@string/roll"/>
 
                                     <Space
                                         android:layout_width="@dimen/sheetSpaceMod"
@@ -370,7 +373,8 @@
                                         android:id="@+id/btnINTRoll"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/roll" />
+                                        android:onClick="rollINT"
+                                        android:text="@string/roll"/>
 
                                     <Space
                                         android:layout_width="@dimen/sheetSpaceMod"
@@ -437,7 +441,8 @@
                                         android:id="@+id/btnWISRoll"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/roll" />
+                                        android:onClick="rollWIS"
+                                        android:text="@string/roll"/>
 
                                     <Space
                                         android:layout_width="@dimen/sheetSpaceMod"
@@ -504,7 +509,8 @@
                                         android:id="@+id/btnCHARoll"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="@string/roll" />
+                                        android:onClick="rollCHA"
+                                        android:text="@string/roll"/>
 
                                     <Space
                                         android:layout_width="@dimen/sheetSpaceMod"

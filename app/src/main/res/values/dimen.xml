@@ -13,9 +13,9 @@
 
 
     <!-- SHEETS 5E SCREEN-->
-    <dimen name="sheetSpaceScore">45dp</dimen>
+    <dimen name="sheetSpaceScore">50dp</dimen>
     <dimen name="sheetSpaceMod">25dp</dimen>
-    <dimen name="sheetValMod">50dp</dimen>
+    <dimen name="sheetValMod">30dp</dimen>
 
 
     <dimen name="btnSpace">25dp</dimen>
