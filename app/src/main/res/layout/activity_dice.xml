@@ -45,7 +45,9 @@
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
-
+            <!-- Each set of buttons has a linear layout with the rolling button(first to appear)
+             and two modifier buttons to add and subtract. as well as a TextView to show modifier numer
+             and the final result of rolls. -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -188,7 +190,7 @@
                     android:background="@null"
                     android:onClick="modAddD8"
                     android:paddingLeft="@dimen/btnSpace"
-                    android:src="@drawable/upbutton"/>
+                    android:src="@drawable/upbutton" />
 
                 <TextView
                     android:id="@+id/txtD8M"
@@ -388,15 +390,21 @@
 
     </LinearLayout>
 
+
+    <!-- This layout contains the reset button which resets the screen back to default
+    and the help button which takes the user to a screen that details and outlines the use
+    of the dice screen-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="diceReset"
-            android:text="RESET"/>
+            android:text="RESET" />
+
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <ScrollView
@@ -18,18 +19,18 @@
                 android:layout_gravity="center_horizontal"
                 android:text="Sheet Selection"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
-
+            <!-- The space is used to create a visible space between the TextView
+            and the list of buttons-->
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="50dp" />
-
+            <!-- THe following buttons take the user to their desired version of the sheets-->
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:onClick="show5E"
-                android:text="D&amp;D 5e"/>
-
+                android:text="D&amp;D 5e" />
 
 
         </LinearLayout>
