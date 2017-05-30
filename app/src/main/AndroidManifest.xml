@@ -32,6 +32,20 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+        <activity android:name=".SheetsActivity">
+            <intent-filter>
+                <action android:name="com.thirdspare.android.SHEETS"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".SheetActivity5E">
+            <intent-filter>
+                <action android:name="com.thirdspare.android.SHEETS5E"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

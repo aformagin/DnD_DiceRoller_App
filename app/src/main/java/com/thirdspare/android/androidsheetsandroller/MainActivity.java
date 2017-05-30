@@ -18,4 +18,9 @@ public class MainActivity extends AppCompatActivity {
         Intent diceIntent = new Intent(this, DiceActivity.class);
         startActivity(diceIntent);
     }
+
+    public void showSheetsScreen (View view){
+        Intent sheetIntent = new Intent(this, SheetsActivity.class);
+        startActivity(sheetIntent);
+    }
 }
