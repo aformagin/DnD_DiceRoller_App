@@ -1,10 +1,32 @@
 <resources>
+
+    <!-- APPLICATION BASED-->
     <string name="app_name">Sheets and Dice Roller</string>
     <string name="title">Sheets and Dice Roller</string>
     <string name = "author"> ThirdSpare</string>
-    <string name="help">HELP</string>
+
+    <!--VALUES/NUMBERS -->
+    <string name="ZERO">0</string>
     <string name="add1">+1</string>
     <string name="minus1">-1</string>
+
+    <!-- COMMON TERMS-->
+    <string name="roll">Roll</string>
+    <string name="help">HELP</string>
+    <string name="score">Score</string>
+    <string name="mod">Mod</string>
+
+
+    <!--Abilities-->
+    <string name="abil">Ability Scores</string>
+    <string name="STR">Strength</string>
+    <string name="DEX">Dexterity</string>
+    <string name="CON">Constitution</string>
+    <string name="INT">Intelligence</string>
+    <string name="WIS">Wisdom</string>
+    <string name="CHA">Charisma</string>
+
+    <!--DICE-->
     <string name="D4">D4</string>
     <string name="D6">D6</string>
     <string name="D8">D8</string>
