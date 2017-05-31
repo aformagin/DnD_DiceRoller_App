@@ -15,6 +15,19 @@
     <string name="help">HELP</string>
     <string name="score">Score</string>
     <string name="mod">Mod</string>
+    <!-- Classes & Races -->
+    <string name="barbarian">Barbarian</string>
+    <string name="bard">Bard</string>
+    <string name="cleric">Cleric</string>
+    <string name="druid">Druid</string>
+    <string name="fighter">Fighter</string>
+    <string name="monk">Monk</string>
+    <string name="paladin">Paladin</string>
+    <string name="ranger">Ranger</string>
+    <string name="rogue">Rogue</string>
+    <string name="sorcerer">Sorcer</string>
+    <string name="warlock">Warlock</string>
+    <string name="wizard">Wizard</string>
 
 
     <!--Abilities-->
