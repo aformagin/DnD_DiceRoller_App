@@ -404,4 +404,50 @@ public class SheetActivity5E extends Activity {
     ////////////////////////////////////////////////////////////
 
 
+
+    ////////////////////////////////////////////////////////////
+    //Level Up Character
+    ////////////////////////////////////////////////////////////
+    public void levelUp (View view){
+        String levelValue;
+        TextView level = (TextView) findViewById(R.id.txtLevelNUM);
+        levelValue = level.getText().toString();
+
+        int num = Integer.parseInt(levelValue);
+
+        if (num >= 24)
+            num++;
+        else
+            num = 25;
+
+        level.setText(Integer.toString(num));
+
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////
+    //Level Down Character
+    ////////////////////////////////////////////////////////////
+    public void levelDown (View view) {
+        String levelValue;
+        TextView level = (TextView) findViewById(R.id.txtLevelNUM);
+        levelValue = level.getText().toString();
+
+        int num = Integer.parseInt(levelValue);
+
+        if (num >= 2)
+            num--;
+        else
+            num = 1;
+
+        level.setText(Integer.toString(num));
+
+    }
+    ////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////
+
 }
