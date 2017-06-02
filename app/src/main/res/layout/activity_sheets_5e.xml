@@ -25,6 +25,7 @@
                     android:text="Character Name:" />
 
                 <EditText
+                    android:id="@+id/edtCharName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
@@ -604,22 +605,27 @@
                                 android:layout_height="wrap_content"
                                 android:text="Classes" />
 
-                            <RadioGroup
+                        <RadioGroup
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/classTxt">
-
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
                                 <RadioButton
+                                    android:id="@+id/rbBard"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/bard" />
 
                                 <RadioButton
+                                    android:id="@+id/rbCleric"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_below="@+id/rbBard"
                                     android:text="@string/cleric" />
 
-                                <RadioButton
+<!--                                <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="@string/druid" />
@@ -632,46 +638,49 @@
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/ranger" />
+                                    android:text="@string/ranger" />-->
 
-                                <RadioButton
+<!--                                <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/rogue" />
+                                    android:text="@string/rogue" />-->
 
-                                <RadioButton
+<!--                                <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/sorcerer" />
+                                    android:text="@string/sorcerer" />-->
 
-                                <RadioButton
+<!--                                <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/warlock" />
+                                    android:text="@string/warlock" />-->
 
-                                <RadioButton
+<!--                                <RadioButton
                                     android:id="@+id/radioButton3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/monk" />
+                                    android:to
+                                    android:text="@string/monk" />-->
 
-                                <RadioButton
+                              <!--  <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/wizard" />
+                                    android:text="@string/wizard" />-->
 
                                 <RadioButton
-                                    android:id="@+id/radioButton"
+                                    android:id="@+id/rbPaladin"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/rbBard"
                                     android:text="@string/paladin" />
 
-                                <RadioButton
+<!--                                <RadioButton
                                     android:id="@+id/radioButton2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/barbarian" />
-                            </RadioGroup>
+                                    android:text="@string/barbarian" />-->
+                            </RelativeLayout>
+                           </RadioGroup>
 
                         </RelativeLayout>
                         <!-- Proficient Ability Checkboxes-->

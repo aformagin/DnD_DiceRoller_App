@@ -3,9 +3,13 @@ package com.thirdspare.android.androidsheetsandroller;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
-public class SheetActivity5E extends Activity {
+import java.io.IOException;
+import java.io.RandomAccessFile;
+
+public class SheetActivity5E extends Activity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -450,4 +454,26 @@ public class SheetActivity5E extends Activity {
 
     ////////////////////////////////////////////////////////////
 
+    ////////////////////////////////////////////////////////////
+    //EXPORT CHARACTER
+    ////////////////////////////////////////////////////////////
+
+    public void exportChar (View view) throws IOException{
+
+        ExportChar[] charArray = new ExportChar [1];
+
+
+        //Gets the character name for the file naming
+        String charName;
+        EditText name = (EditText) findViewById(R.id.edtCharName);
+        charName = name.getText().toString();
+        charName = charName + ".txt";
+
+
+        RandomAccessFile charFile = new RandomAccessFile(charName, "rw");
+
+
+        //Write the information to a text file
+
+    }
 }
