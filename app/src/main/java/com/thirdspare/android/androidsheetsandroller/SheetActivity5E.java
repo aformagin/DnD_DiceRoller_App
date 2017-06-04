@@ -419,7 +419,7 @@ public class SheetActivity5E extends Activity {
 
         int num = Integer.parseInt(levelValue);
 
-        if (num >= 24)
+        if (num <= 24)
             num++;
         else
             num = 25;

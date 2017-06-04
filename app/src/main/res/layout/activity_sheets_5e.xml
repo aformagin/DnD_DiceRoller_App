@@ -79,43 +79,43 @@
                                 android:id="@+id/rbElf"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Elf"
-                                android:onClick="setElf"/>
+                                android:onClick="setElf"
+                                android:text="Elf"/>
 
                             <RadioButton
                                 android:id="@+id/rbHuman"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Human"
-                                android:onClick="setHuman"/>
+                                android:onClick="setHuman"
+                                android:text="Human"/>
 
                             <RadioButton
                                 android:id="@+id/rbHalfOrc"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Half-Orc"
-                                android:onClick="setHalfOrc"/>
+                                android:onClick="setHalfOrc"
+                                android:text="Half-Orc"/>
 
                             <RadioButton
                                 android:id="@+id/rbHalfElf"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Half-Elf"
-                                android:onClick="setHalfElf"/>
+                                android:onClick="setHalfElf"
+                                android:text="Half-Elf"/>
 
                             <RadioButton
                                 android:id="@+id/rbGnome"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Gnome"
-                                android:onClick="setGnome"/>
+                                android:onClick="setGnome"
+                                android:text="Gnome"/>
 
                             <RadioButton
                                 android:id="@+id/rbDwarf"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Dwarf"
-                                android:onClick="setDwarf"/>
+                                android:onClick="setDwarf"
+                                android:text="Dwarf"/>
 
 
                         </RadioGroup>
@@ -753,6 +753,7 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="exportChar"
                         android:text="Export"/>
                 </LinearLayout>
 
