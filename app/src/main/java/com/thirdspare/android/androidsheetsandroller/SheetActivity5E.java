@@ -9,7 +9,7 @@ import android.widget.TextView;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class SheetActivity5E extends Activity{
+public class SheetActivity5E extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -408,11 +408,10 @@ public class SheetActivity5E extends Activity{
     ////////////////////////////////////////////////////////////
 
 
-
     ////////////////////////////////////////////////////////////
     //Level Up Character
     ////////////////////////////////////////////////////////////
-    public void levelUp (View view){
+    public void levelUp(View view) {
         String levelValue;
         TextView level = (TextView) findViewById(R.id.txtLevelNUM);
         levelValue = level.getText().toString();
@@ -435,7 +434,7 @@ public class SheetActivity5E extends Activity{
     ////////////////////////////////////////////////////////////
     //Level Down Character
     ////////////////////////////////////////////////////////////
-    public void levelDown (View view) {
+    public void levelDown(View view) {
         String levelValue;
         TextView level = (TextView) findViewById(R.id.txtLevelNUM);
         levelValue = level.getText().toString();
@@ -458,22 +457,63 @@ public class SheetActivity5E extends Activity{
     //EXPORT CHARACTER
     ////////////////////////////////////////////////////////////
 
-    public void exportChar (View view) throws IOException{
+    public void exportChar(View view) throws IOException {
 
-        ExportChar[] charArray = new ExportChar [1];
-
-
-        //Gets the character name for the file naming
+        //Declares variables and array for record
+        ExportChar[] charArray = new ExportChar[1];
         String charName;
+        String charRace;
+        int constitution;
+        int charisma;
+        int dexterity;
+        int intelligence;
+        int strength;
+        int wisdom;
+        int charLevel;
+        //Gets the character information to be written to file
         EditText name = (EditText) findViewById(R.id.edtCharName);
         charName = name.getText().toString();
-        charName = charName + ".txt";
+        if (charName == null) {
+            charName = "Unnamed";
+        }
+        TextView race = (TextView) findViewById(R.id.txtRaceField);
+        TextView con = (TextView) findViewById(R.id.txtCONScoreVAL);
+        TextView cha = (TextView) findViewById(R.id.txtCHAScoreVAL);
+        TextView dex = (TextView) findViewById(R.id.txtDEXScoreVAL);
+        TextView intel = (TextView) findViewById(R.id.txtINTScoreVAL);
+        TextView str = (TextView) findViewById(R.id.txtSTRScoreVAL);
+        TextView wis = (TextView) findViewById(R.id.txtWISScoreVAL);
+        TextView level = (TextView) findViewById(R.id.txtLevelNUM);
 
+        //Converts or parses information into proper variable types
+        charRace = race.getText().toString();//Character Race
+        constitution = Integer.parseInt((con.getText().toString()));//Con score
+        charisma = Integer.parseInt((cha.getText().toString()));//
+        dexterity = Integer.parseInt((dex.getText().toString()));
+        intelligence = Integer.parseInt((intel.getText().toString()));
+        strength = Integer.parseInt((str.getText().toString()));
+        wisdom = Integer.parseInt((wis.getText().toString()));
+        charLevel = Integer.parseInt((level.getText().toString()));
 
-        RandomAccessFile charFile = new RandomAccessFile(charName, "rw");
+        charArray[0] = new ExportChar(charName, charRace, strength, constitution, dexterity, intelligence, wisdom, charisma, charLevel);
+        //Sets the file file name to that of the character
+        String charNameFile = charName + ".txt";
+        RandomAccessFile charFile = new RandomAccessFile(charNameFile, "rw");
 
 
         //Write the information to a text file
 
+        //File writer may be better for this instead of what I am doing
+        charFile.seek(0);
+        for (int x = 0; x < charArray.length; x++) {
+            charFile.writeInt(charArray[x].getLevel());
+            charFile.writeInt(charArray[x].getSTR());
+            charFile.writeInt(charArray[x].getCON());
+            charFile.writeInt(charArray[x].getDEX());
+            charFile.writeInt(charArray[x].getINT());
+            charFile.writeInt(charArray[x].getWIS());
+            charFile.writeInt(charArray[x].getCHA());
+        }
+        charFile.close();
     }
 }
