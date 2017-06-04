@@ -6,8 +6,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.io.RandomAccessFile;
 
 public class SheetActivity5E extends Activity {
 
@@ -452,7 +453,88 @@ public class SheetActivity5E extends Activity {
     ////////////////////////////////////////////////////////////
 
     ////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////
+    //Race Selections
+    ////////////////////////////////////////////////////////////
+    public void setElf(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Elf");
+    }
+    public void setHuman(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Human");
+    }
+    public void setHalfOrc(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Half-Orc");
+    }
+    public void setHalfElf(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Half-Elf");
+    }
+    public void setDwarf(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Dwarf");
+    }
+    public void setGnome(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Gnome");
+    }
+    ////////////////////////////////////////////////////////////
 
+    ////////////////////////////////////////////////////////////
+
+    ////////////////////////////////////////////////////////////
+    //Class Selections
+    ////////////////////////////////////////////////////////////
+    public void setBarbarian(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Barbarian");
+    }
+    public void setBard(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Bard");
+    }
+    public void setCleric(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Cleric");
+    }
+    public void setDruid(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Druid");
+    }
+    public void setFighter(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Fighter");
+    }
+    public void setMonk(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Monk");
+    }
+    public void setPaladin(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Paladin");
+    }
+    public void setRanger(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Ranger");
+    }
+    public void setRogue(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Rogue");
+    }
+    public void setSorcerer(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Sorcerer");
+    }
+    public void setWarlock(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Warlock");
+    }
+    public void setWizard(View view){
+        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        race.setText("Wizard");
+    }
     ////////////////////////////////////////////////////////////
     //EXPORT CHARACTER
     ////////////////////////////////////////////////////////////
@@ -463,6 +545,7 @@ public class SheetActivity5E extends Activity {
         ExportChar[] charArray = new ExportChar[1];
         String charName;
         String charRace;
+        String charClass;
         int constitution;
         int charisma;
         int dexterity;
@@ -484,6 +567,7 @@ public class SheetActivity5E extends Activity {
         TextView str = (TextView) findViewById(R.id.txtSTRScoreVAL);
         TextView wis = (TextView) findViewById(R.id.txtWISScoreVAL);
         TextView level = (TextView) findViewById(R.id.txtLevelNUM);
+        TextView classes = (TextView)findViewById(R.id.classNameTxt);
 
         //Converts or parses information into proper variable types
         charRace = race.getText().toString();//Character Race
@@ -494,26 +578,23 @@ public class SheetActivity5E extends Activity {
         strength = Integer.parseInt((str.getText().toString()));
         wisdom = Integer.parseInt((wis.getText().toString()));
         charLevel = Integer.parseInt((level.getText().toString()));
+        charClass = classes.getText().toString();
 
-        charArray[0] = new ExportChar(charName, charRace, strength, constitution, dexterity, intelligence, wisdom, charisma, charLevel);
+        charArray[0] = new ExportChar(charName, charRace, charClass, strength, constitution, dexterity, intelligence, wisdom, charisma, charLevel);
         //Sets the file file name to that of the character
         String charNameFile = charName + ".txt";
-        RandomAccessFile charFile = new RandomAccessFile(charNameFile, "rw");
-
 
         //Write the information to a text file
 
-        //File writer may be better for this instead of what I am doing
-        charFile.seek(0);
-        for (int x = 0; x < charArray.length; x++) {
-            charFile.writeInt(charArray[x].getLevel());
-            charFile.writeInt(charArray[x].getSTR());
-            charFile.writeInt(charArray[x].getCON());
-            charFile.writeInt(charArray[x].getDEX());
-            charFile.writeInt(charArray[x].getINT());
-            charFile.writeInt(charArray[x].getWIS());
-            charFile.writeInt(charArray[x].getCHA());
+        //Using file writer to export the character to a text file
+        try {
+            File file = new File(charNameFile);
+            FileWriter fileWriter = new FileWriter(file);
+            fileWriter.write(charArray[0].toString());//Uses the ExportChar toString to write to file
+            fileWriter.flush();
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        charFile.close();
     }
 }

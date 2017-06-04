@@ -15,6 +15,7 @@ public class ExportChar {
    // protected String skillProf;
     protected String race;
     protected String name;
+    protected String charClass;
 
 
     //RECORD SIZE
@@ -23,11 +24,13 @@ public class ExportChar {
     //Each ability score is 4 bytes, 6*4 + 4(This is the level) = 28
     public static final int RECORD_SIZE = 133;
 
-    public ExportChar(String name, String race, int STR, int CON, int DEX, int INT, int WIS, int CHA, int level) {
+    public ExportChar(String name, String race, String charClass, int STR, int CON, int DEX, int INT, int WIS, int CHA, int level) {
         StringBuffer tempString = new StringBuffer (name);
         tempString.setLength(31);
         this.name = tempString.toString();
         tempString = new StringBuffer(race);
+        tempString.setLength(8);
+        tempString = new StringBuffer(charClass);
         tempString.setLength(8);
         this.race = tempString.toString();
         this.CHA = CHA;
@@ -39,6 +42,7 @@ public class ExportChar {
         this.level = level;
         this.name = name;
         this.race = race;
+        this.charClass = charClass;
     }
 
     //Accessors and Mutators
@@ -67,4 +71,9 @@ public class ExportChar {
 
 
     //toString for the object
+    public String toString(){
+        String data1 = ("Character Name: " + this.name + "\n" + "Character Level and Class: " + this.level + " " + this.charClass +"\n");
+        data1 = (data1 + "Ability Scores and Modifiers" + "\n" + "STR: " + this.STR + "\n" + "CON: " + this.CON+ "\n");
+        return data1;
+    }
 }
