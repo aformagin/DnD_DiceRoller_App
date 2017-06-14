@@ -57,7 +57,12 @@
             android:background="@null"
             android:src="@drawable/rulesbutton"
             android:text="RULES"/>
-
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="showAboutScreen"
+            android:background="@null"
+            android:src="@drawable/aboutbutton"/>
     </LinearLayout>
 </LinearLayout>
 
