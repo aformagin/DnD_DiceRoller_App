@@ -750,11 +750,12 @@
 
 
                     </LinearLayout>
-                    <Button
+                    <ImageButton
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:onClick="exportChar"
-                        android:text="Export"/>
+                        android:background="@null"
+                        android:src="@drawable/exportbutton"/>
                 </LinearLayout>
 
             </LinearLayout>
