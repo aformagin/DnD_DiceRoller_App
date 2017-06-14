@@ -50,7 +50,55 @@ public class DiceActivity extends Activity {
             }
 
         });
+        
+        Button btn8 = (Button) this.findViewById(R.id.btnD8);
+        final TextView mod8 = (TextView) this.findViewById(R.id.txtD8M);
+        final TextView txt8 = (TextView) this.findViewById(R.id.txtD8);
+        btn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                diceSoundMP.start();
+                roll(8, Integer.parseInt(mod8.getText().toString()), txt8);
+            }
 
+        });
+        
+        Button btn10 = (Button) this.findViewById(R.id.btnD10);
+        final TextView mod10 = (TextView) this.findViewById(R.id.txtD10M);
+        final TextView txt10 = (TextView) this.findViewById(R.id.txtD10);
+        btn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                diceSoundMP.start();
+                roll(10, Integer.parseInt(mod10.getText().toString()), txt10);
+            }
+
+        });
+        Button btn12 = (Button) this.findViewById(R.id.btnD12);
+        final TextView mod12 = (TextView) this.findViewById(R.id.txtD12M);
+        final TextView txt12 = (TextView) this.findViewById(R.id.txtD12);
+        btn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                diceSoundMP.start();
+                roll(12, Integer.parseInt(mod12.getText().toString()), txt12);
+            }
+
+        });
+        Button btn20 = (Button) this.findViewById(R.id.btnD20);
+        final TextView mod20 = (TextView) this.findViewById(R.id.txtD20M);
+        final TextView txt20 = (TextView) this.findViewById(R.id.txtD20);
+        btn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                diceSoundMP.start();
+                roll(20, Integer.parseInt(mod20.getText().toString()), txt20);
+            }
+
+        });
+        /////////////////////////////////////////////////////////////////////
+        //Mods(+/-)
+        /////////////////////////////////////////////////////////////////////
         ImageButton btn4Add = (ImageButton) this.findViewById(R.id.btnUpD4);
         btn4Add.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -66,10 +114,85 @@ public class DiceActivity extends Activity {
                 modSub(mod4);
             }
         });
+        ImageButton btn6Add = (ImageButton) this.findViewById(R.id.btnUpD6);
+        btn6Add.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modAdd(mod6);
+            }
+        });
 
+        ImageButton btn6Sub = (ImageButton) this.findViewById(R.id.btnDownD6);
+        btn6Sub.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modSub(mod6);
+            }
+        });
+        
+        ImageButton btn8Add = (ImageButton) this.findViewById(R.id.btnUpD8);
+        btn8Add.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modAdd(mod8);
+            }
+        });
+
+        ImageButton btn8Sub = (ImageButton) this.findViewById(R.id.btnDownD8);
+        btn8Sub.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modSub(mod8);
+            }
+        });
+        ImageButton btn10Add = (ImageButton) this.findViewById(R.id.btnUpD10);
+        btn10Add.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modAdd(mod10);
+            }
+        });
+
+        ImageButton btn10Sub = (ImageButton) this.findViewById(R.id.btnDownD10);
+        btn10Sub.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modSub(mod10);
+            }
+        });
+                ImageButton btn12Add = (ImageButton) this.findViewById(R.id.btnUpD12);
+        btn12Add.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modAdd(mod12);
+            }
+        });
+
+        ImageButton btn12Sub = (ImageButton) this.findViewById(R.id.btnDownD12);
+        btn12Sub.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modSub(mod12);
+            }
+        });
+                ImageButton btn20Add = (ImageButton) this.findViewById(R.id.btnUpD20);
+        btn20Add.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modAdd(mod20);
+            }
+        });
+
+        ImageButton btn20Sub = (ImageButton) this.findViewById(R.id.btnDownD20);
+        btn20Sub.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modSub(mod20);
+            }
+        });
     }
 
-
+    //Methods
     public void roll (int sides, int mod, TextView text){
         int num = 0;
         String modValue;
@@ -84,165 +207,7 @@ public class DiceActivity extends Activity {
         text.setText(String.valueOf(Integer.parseInt(text.getText().toString())-1));
     }
 
-    ////////////////////////////////////////////////////////////////////////////
-    //EIGHT SIDED DIE
-    ////////////////////////////////////////////////////////////////////////////
-    public void rollD8(View view) {
-        int num = 0;
-        String modValue;
-        num = (int) (Math.random() * (8 - 1 + 1) + 1);
-
-
-        //Gets the modifier so it can be added to the num
-        TextView diceMod = (TextView) findViewById(R.id.txtD8M);
-        modValue = diceMod.getText().toString();
-        int mod = Integer.parseInt(modValue);
-        if (diceMod.getText() == null) {
-            diceMod.setText("0");
-        }
-
-        TextView dice = (TextView) (findViewById(R.id.txtD8));
-        dice.setText(Integer.toString(num + mod));
-    }
-
-    public void modAddD8(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD8M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num++;
-        diceMod.setText(Integer.toString(num));
-    }
-
-    public void modSubD8(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD8M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num--;
-        diceMod.setText(Integer.toString(num));
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    //TEN SIDED DIE
-    ////////////////////////////////////////////////////////////////////////////
-    public void rollD10(View view) {
-        int num = 0;
-        String modValue;
-
-        num = (int) (Math.random() * (10 - 1 + 1) + 1);
-
-
-        //Gets the modifier so it can be added to the num
-        TextView diceMod = (TextView) findViewById(R.id.txtD10M);
-        modValue = diceMod.getText().toString();
-        int mod = Integer.parseInt(modValue);
-        if (diceMod.getText() == null) {
-            diceMod.setText("0");
-        }
-
-        TextView dice = (TextView) (findViewById(R.id.txtD10));
-        dice.setText(Integer.toString(num + mod));
-    }
-
-    public void modAddD10(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD10M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num++;
-        diceMod.setText(Integer.toString(num));
-    }
-
-    public void modSubD10(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD10M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num--;
-        diceMod.setText(Integer.toString(num));
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    //TWELVE SIDED DIE
-    ////////////////////////////////////////////////////////////////////////////
-    public void rollD12(View view) {
-        int num = 0;
-        String modValue;
-
-        num = (int) (Math.random() * (12 - 1 + 1) + 1);
-
-
-        //Gets the modifier so it can be added to the num
-        TextView diceMod = (TextView) findViewById(R.id.txtD12M);
-        modValue = diceMod.getText().toString();
-        int mod = Integer.parseInt(modValue);
-        if (diceMod.getText() == null) {
-            diceMod.setText("0");
-        }
-
-        TextView dice = (TextView) (findViewById(R.id.txtD12));
-        dice.setText(Integer.toString(num + mod));
-    }
-
-    public void modAddD12(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD12M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num++;
-        diceMod.setText(Integer.toString(num));
-    }
-
-    public void modSubD12(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD12M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num--;
-        diceMod.setText(Integer.toString(num));
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    //TWENTY SIDED DIE
-    ////////////////////////////////////////////////////////////////////////////
-    public void rollD20(View view) {
-        int num = 0;
-        String modValue;
-
-        num = (int) (Math.random() * (20 - 1 + 1) + 1);
-
-        //Gets the modifier so it can be added to the num
-        TextView diceMod = (TextView) findViewById(R.id.txtD20M);
-        modValue = diceMod.getText().toString();
-        int mod = Integer.parseInt(modValue);
-        if (diceMod.getText() == null) {
-            diceMod.setText("0");
-        }
-
-        TextView dice = (TextView) (findViewById(R.id.txtD20));
-        dice.setText(Integer.toString(num + mod));
-    }
-
-    public void modAddD20(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD20M);
-
-
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num++;
-        diceMod.setText(Integer.toString(num));
-    }
-
-    public void modSubD20(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD20M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num--;
-        diceMod.setText(Integer.toString(num));
-    }
+  
     ////////////////////////////////////////////////////////////////////////////
     //PERCENTILE SIDED DIE
     ////////////////////////////////////////////////////////////////////////////
