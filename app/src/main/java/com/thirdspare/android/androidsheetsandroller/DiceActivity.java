@@ -3,9 +3,13 @@ package com.thirdspare.android.androidsheetsandroller;
 //This is the dice rolling class for the dice layout. Here will be the rolling functions for each type of die
 
 import android.app.Activity;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+
 
 //Types of die
 //D4
@@ -22,91 +26,62 @@ public class DiceActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dice);
 
+
+        final MediaPlayer diceSoundMP = MediaPlayer.create(this, R.raw.dicesound);
+        Button btn4 = (Button) this.findViewById(R.id.btnD4);
+        final TextView mod4 = (TextView) this.findViewById(R.id.txtD4M);
+        final TextView txt4 = (TextView) this.findViewById(R.id.txtD4);
+        btn4.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                diceSoundMP.start();
+                roll(4, Integer.parseInt(mod4.getText().toString()), txt4);
+            }
+        });
+
+        Button btn6 = (Button) this.findViewById(R.id.btnD6);
+        final TextView mod6 = (TextView) this.findViewById(R.id.txtD6M);
+        final TextView txt6 = (TextView) this.findViewById(R.id.txtD6);
+        btn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                diceSoundMP.start();
+                roll(6, Integer.parseInt(mod6.getText().toString()), txt6);
+            }
+
+        });
+
+        ImageButton btn4Add = (ImageButton) this.findViewById(R.id.btnUpD4);
+        btn4Add.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modAdd(mod4);
+            }
+        });
+
+        ImageButton btn4Sub = (ImageButton) this.findViewById(R.id.btnDownD4);
+        btn4Sub.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                modSub(mod4);
+            }
+        });
+
     }
 
-    ////////////////////////////////////////////////////////////////////////////
-    //FOUR SIDED DIE
-    ////////////////////////////////////////////////////////////////////////////
-    public void rollD4(View view) {
+
+    public void roll (int sides, int mod, TextView text){
         int num = 0;
         String modValue;
-        num = (int) (Math.random() * (4 - 1 + 1) + 1);
+        num = (int) (Math.random() * (sides) + 1);
 
-
-        //Gets the modifier so it can be added to the num
-        TextView diceMod = (TextView) findViewById(R.id.txtD4M);
-        modValue = diceMod.getText().toString();
-        int mod = Integer.parseInt(modValue);
-        if (diceMod.getText() == null) {
-            diceMod.setText("0");
-        }
-
-
-        TextView dice = (TextView) (findViewById(R.id.txtD4));
-        dice.setText(Integer.toString(num + mod));
-
+        text.setText(Integer.toString(num + mod));
     }
-
-    public void modAddD4(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD4M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num++;
-        diceMod.setText(Integer.toString(num));
+    public void modAdd(TextView text){
+        text.setText(String.valueOf(Integer.parseInt(text.getText().toString())+1));
     }
-
-    public void modSubD4(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD4M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num--;
-        diceMod.setText(Integer.toString(num));
-    }
-
-    ////////////////////////////////////////////////////////////////////////////
-    //SIX SIDED DIE
-    ////////////////////////////////////////////////////////////////////////////
-    //Classic 6 sided die
-    public void rollD6(View view) {
-
-        int num = 0;
-        String modValue;
-
-        //Randomly generates a number ot be placed in the dice result field
-        num = (int) (Math.random() * (6 - 1 + 1) + 1);
-
-        //Gets the modifier so it can be added to the num
-        TextView diceMod = (TextView) findViewById(R.id.txtD6M);
-        TextView dice = (TextView) (findViewById(R.id.txtD6));
-        modValue = diceMod.getText().toString();
-        int mod = Integer.parseInt(modValue);
-        if (diceMod.getText() == null) {
-            diceMod.setText("0");
-        }
-
-
-        dice.setText(Integer.toString(num + mod));
-    }
-
-
-    public void modAddD6(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD6M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num++;
-        diceMod.setText(Integer.toString(num));
-    }
-
-    public void modSubD6(View view) {
-        String modValue;
-        TextView diceMod = (TextView) findViewById(R.id.txtD6M);
-        modValue = diceMod.getText().toString();
-        int num = Integer.parseInt(modValue);
-        num--;
-        diceMod.setText(Integer.toString(num));
+    public void modSub(TextView text){
+        text.setText(String.valueOf(Integer.parseInt(text.getText().toString())-1));
     }
 
     ////////////////////////////////////////////////////////////////////////////
@@ -256,7 +231,7 @@ public class DiceActivity extends Activity {
 
         modValue = diceMod.getText().toString();
         int num = Integer.parseInt(modValue);
-            num++;
+        num++;
         diceMod.setText(Integer.toString(num));
     }
 
@@ -306,7 +281,7 @@ public class DiceActivity extends Activity {
         ((TextView)findViewById(R.id.txtD12)).setText("0");
         ((TextView)findViewById(R.id.txtD20M)).setText("0");
         ((TextView)findViewById(R.id.txtD20)).setText("0");
-       // ((TextView)findViewById(R.id.txtD4M)).setText("0");
-       // ((TextView)findViewById(R.id.txtD4)).setText("0");
+        // ((TextView)findViewById(R.id.txtD4M)).setText("0");
+        // ((TextView)findViewById(R.id.txtD4)).setText("0");
     }
 }

@@ -1,14 +1,14 @@
 package com.thirdspare.android.androidsheetsandroller;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.FileOutputStream;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class SheetActivity5E extends Activity {
@@ -588,28 +588,15 @@ public class SheetActivity5E extends Activity {
         //Write the information to a text file
 
         //Using file writer to export the character to a text file
-       /* try {
-            File file = new File(context.getFilesDir(), charNameFile);
+        try {
+            File file = new File(getFilesDir(), charNameFile);
+            System.out.println(file.getAbsolutePath());
             FileWriter fileWriter = new FileWriter(file);
             fileWriter.write(charArray[0].toString());//Uses the ExportChar toString to write to file
             fileWriter.flush();
             fileWriter.close();
             Toast.makeText(SheetActivity5E.this, "File Created", Toast.LENGTH_LONG).show();
         } catch (IOException e) {
-            e.printStackTrace();
-            Toast.makeText(SheetActivity5E.this, "File Not Created", Toast.LENGTH_LONG).show();
-        }*/
-
-        FileOutputStream outputStream;
-
-        try{
-            outputStream = openFileOutput(charNameFile, Context.MODE_PRIVATE);
-            outputStream.write(charArray[0].toString().getBytes());
-            outputStream.close();
-            Toast.makeText(SheetActivity5E.this, "File Created @" + getFilesDir(), Toast.LENGTH_LONG).show();
-
-
-        }catch (IOException e) {
             e.printStackTrace();
             Toast.makeText(SheetActivity5E.this, "File Not Created", Toast.LENGTH_LONG).show();
         }

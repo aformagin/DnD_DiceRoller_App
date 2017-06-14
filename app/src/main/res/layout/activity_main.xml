@@ -41,12 +41,7 @@
             android:onClick="showDiceScreen"
             android:paddingLeft="12dp"
             android:src="@drawable/dicebutton"/>
-<Button
-    android:id="@+id/tst"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:onClick="testString"
-    android:text="Test"/>
+
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -55,6 +50,11 @@
             android:onClick="showSheetsScreen"
             android:paddingLeft="12dp"
             android:src="@drawable/sheetsbutton"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:onClick="showRulesScreen"
+            android:text="RULES"/>
 
     </LinearLayout>
 </LinearLayout>
