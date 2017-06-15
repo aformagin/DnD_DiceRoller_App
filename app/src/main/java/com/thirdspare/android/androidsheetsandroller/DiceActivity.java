@@ -54,7 +54,7 @@ public class DiceActivity extends Activity {
         Button btn8 = (Button) this.findViewById(R.id.btnD8);
         final TextView mod8 = (TextView) this.findViewById(R.id.txtD8M);
         final TextView txt8 = (TextView) this.findViewById(R.id.txtD8);
-        btn6.setOnClickListener(new View.OnClickListener(){
+        btn8.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 diceSoundMP.start();
@@ -66,7 +66,7 @@ public class DiceActivity extends Activity {
         Button btn10 = (Button) this.findViewById(R.id.btnD10);
         final TextView mod10 = (TextView) this.findViewById(R.id.txtD10M);
         final TextView txt10 = (TextView) this.findViewById(R.id.txtD10);
-        btn6.setOnClickListener(new View.OnClickListener(){
+        btn10.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 diceSoundMP.start();
@@ -77,7 +77,7 @@ public class DiceActivity extends Activity {
         Button btn12 = (Button) this.findViewById(R.id.btnD12);
         final TextView mod12 = (TextView) this.findViewById(R.id.txtD12M);
         final TextView txt12 = (TextView) this.findViewById(R.id.txtD12);
-        btn6.setOnClickListener(new View.OnClickListener(){
+        btn12.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 diceSoundMP.start();
@@ -88,7 +88,7 @@ public class DiceActivity extends Activity {
         Button btn20 = (Button) this.findViewById(R.id.btnD20);
         final TextView mod20 = (TextView) this.findViewById(R.id.txtD20M);
         final TextView txt20 = (TextView) this.findViewById(R.id.txtD20);
-        btn6.setOnClickListener(new View.OnClickListener(){
+        btn20.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 diceSoundMP.start();
