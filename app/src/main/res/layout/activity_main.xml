@@ -17,8 +17,6 @@
             android:id="@+id/txtTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
             android:layout_marginBottom="50dp"
             android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
@@ -35,6 +33,7 @@
         android:orientation="vertical">
 
         <ImageButton
+            android:id="@+id/btnDice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -43,6 +42,7 @@
             android:src="@drawable/dicebutton"/>
 
         <ImageButton
+            android:id="@+id/btnSheets"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
@@ -51,17 +51,18 @@
 
             android:src="@drawable/sheetsbutton"/>
         <ImageButton
+            android:id="@+id/btnRules"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@null"
             android:onClick="showRulesScreen"
-            android:background="@null"
-            android:src="@drawable/rulesbutton"
-            android:text="RULES"/>
+            android:src="@drawable/rulesbutton" />
         <ImageButton
+            android:id="@+id/btnAbout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:onClick="showAboutScreen"
             android:background="@null"
+            android:onClick="showAboutScreen"
             android:src="@drawable/aboutbutton"/>
     </LinearLayout>
 </LinearLayout>

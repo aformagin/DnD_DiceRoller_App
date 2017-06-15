@@ -42,7 +42,11 @@ public class MainActivity extends Activity {
         startActivity(sheetIntent);
     }
     public void showRulesScreen (View view){
-        Intent rulesIntent = new Intent(this, WebActivity.class);
+        Intent rulesIntent = new Intent(this, PDFActivity.class);
         startActivity(rulesIntent);
+    }
+    public void showAboutScreen (View view){
+        Intent showAbout = new Intent(this, AboutActivity.class);
+        startActivity(showAbout);
     }
 }

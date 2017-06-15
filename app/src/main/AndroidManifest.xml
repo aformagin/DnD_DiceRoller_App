@@ -26,7 +26,7 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
-        <activity android:name=".WebActivity">
+        <activity android:name=".PDFActivity">
             <intent-filter>
                 <action android:name="com.thirdspare.android.MAIN"/>
 
@@ -50,6 +50,13 @@
         <activity android:name=".SheetActivity5E">
             <intent-filter>
                 <action android:name="com.thirdspare.android.SHEETS5E"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".AboutActivity">
+            <intent-filter>
+                <action android:name="com.thirdspare.android.ABOUT"/>
 
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>

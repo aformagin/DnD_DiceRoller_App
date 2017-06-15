@@ -41,7 +41,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="Press 'HELP'"
+                    android:text="@string/press_help"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
             </LinearLayout>
@@ -57,8 +57,7 @@
                     android:id="@+id/btnD4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="rollD4"
-                    android:text="D4"
+                    android:text="@string/d4"
                     android:textStyle="bold" />
 
                 <ImageButton
@@ -67,7 +66,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modSubD4"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/downbutton" />
 
@@ -77,7 +75,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modAddD4"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/upbutton"
 
@@ -89,7 +86,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
                 <TextView
@@ -98,7 +95,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
 
@@ -113,8 +110,7 @@
                     android:id="@+id/btnD6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="rollD6"
-                    android:text="D6"
+                    android:text="@string/d6"
                     android:textStyle="bold" />
 
                 <ImageButton
@@ -123,7 +119,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modSubD6"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/downbutton" />
 
@@ -133,7 +128,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modAddD6"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/upbutton" />
 
@@ -143,7 +137,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
                 <TextView
@@ -152,7 +146,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
 
@@ -167,8 +161,7 @@
                     android:id="@+id/btnD8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="rollD8"
-                    android:text="D8"
+                    android:text="@string/d8"
                     android:textStyle="bold" />
 
                 <ImageButton
@@ -177,7 +170,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modSubD8"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/downbutton"
                     android:text="@string/minus1" />
@@ -188,7 +180,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modAddD8"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/upbutton" />
 
@@ -198,7 +189,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
                 <TextView
@@ -207,7 +198,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
 
@@ -222,8 +213,7 @@
                     android:id="@+id/btnD10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="rollD10"
-                    android:text="D10"
+                    android:text="@string/d10"
                     android:textStyle="bold" />
 
                 <ImageButton
@@ -232,7 +222,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modSubD10"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/downbutton" />
 
@@ -242,7 +231,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modAddD10"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/upbutton" />
 
@@ -252,7 +240,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
                 <TextView
@@ -261,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
 
@@ -276,8 +264,7 @@
                     android:id="@+id/btnD12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="rollD12"
-                    android:text="D12"
+                    android:text="@string/d12"
                     android:textStyle="bold" />
 
                 <ImageButton
@@ -286,7 +273,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modAddD12"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/downbutton"
                     android:text="@string/minus1" />
@@ -297,7 +283,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modAddD12"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/upbutton" />
 
@@ -307,7 +292,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
                 <TextView
@@ -316,7 +301,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
 
@@ -332,8 +317,7 @@
                     android:id="@+id/btnD20"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="rollD20"
-                    android:text="D20"
+                    android:text="@string/d20"
                     android:textStyle="bold" />
 
                 <ImageButton
@@ -342,7 +326,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modSubD20"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/downbutton" />
 
@@ -352,7 +335,6 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:background="@null"
-                    android:onClick="modAddD20"
                     android:paddingLeft="@dimen/btnSpace"
                     android:src="@drawable/upbutton" />
 
@@ -362,7 +344,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
                 <TextView
@@ -371,7 +353,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="15dp"
                     android:paddingRight="15dp"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
 
@@ -403,16 +385,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="diceReset"
-            android:text="RESET" />
+            android:text="@string/reset" />
 
         <ImageButton
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@null"
-            android:src="@drawable/helpbutton"
-            android:text="@string/help" />
-
+            android:src="@drawable/helpbutton"/>
 
     </LinearLayout>
 
