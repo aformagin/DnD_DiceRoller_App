@@ -25,7 +25,7 @@ public class PDFActivity extends Activity {
        // mWebView = (WebView)findViewById(R.id.wbvTest);
         mWebView.setWebViewClient(new WebViewClient());
        // mWebView.loadUrl("http://www.thirdspare.com");
-        mWebView.loadUrl("https://drive.google.com/open?id=0B6DUBubZyJV9bDlKOGs1N3ZXRTA");
+        mWebView.loadUrl("https://drive.google.com/open?id=0B6DUBubZyJV9bDlKOGs1N3ZXRTA");//This loads the PDF to view
 
     }
 }

@@ -25,7 +25,7 @@ public class AboutActivity extends Activity {
         // mWebView = (WebView)findViewById(R.id.wbvTest);
         mWebView.setWebViewClient(new WebViewClient());
         // mWebView.loadUrl("http://www.thirdspare.com");
-        mWebView.loadUrl("http://thirdspare.com/index.php/about/");
+        mWebView.loadUrl("http://thirdspare.com/index.php/about/");//Opens the about page at ThirdSpare
 
     }
 }

@@ -634,67 +634,75 @@
                                     android:id="@+id/radioButton2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/barbarian" />
+                                    android:onClick="setBarbarian"
+                                    android:text="@string/barbarian"/>
 
                                 <RadioButton
                                     android:id="@+id/rbBard"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/bard" />
+                                    android:onClick="setBard"
+                                    android:text="@string/bard"/>
 
                                 <RadioButton
                                     android:id="@+id/rbCleric"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/cleric" />
+                                    android:onClick="setCleric"
+                                    android:text="@string/cleric"/>
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/druid" />
+                                    android:onClick="setDruid"
+                                    android:text="@string/druid"/>
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/fighter" />
-
+                                    android:onClick="setFighter"
+                                    android:text="@string/fighter"/>
                                 <RadioButton
                                     android:id="@+id/radioButton3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/monk" />
-
+                                    android:onClick="setMonk"
+                                    android:text="@string/monk"/>
                                 <RadioButton
                                     android:id="@+id/rbPaladin"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/paladin" />
-
+                                    android:onClick="setPaladin"
+                                    android:text="@string/paladin"/>
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:onClick="setRanger"
+                                    android:text="@string/ranger"/>
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/ranger" />
+                                    android:onClick="setRogue"
+                                    android:text="@string/rogue"/>
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/rogue" />
+                                    android:onClick="setSorcerer"
+                                    android:text="@string/sorcerer"/>
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/sorcerer" />
+                                    android:onClick="setWarlock"
+                                    android:text="@string/warlock"/>
 
                                 <RadioButton
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="@string/warlock" />
-
-                                <RadioButton
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/wizard" />
+                                    android:onClick="setWizard"
+                                    android:text="@string/wizard"/>
 
 
                             </RadioGroup>

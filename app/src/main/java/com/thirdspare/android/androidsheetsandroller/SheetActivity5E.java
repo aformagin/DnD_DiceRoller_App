@@ -420,12 +420,12 @@ public class SheetActivity5E extends Activity {
 
         int num = Integer.parseInt(levelValue);
 
-        if (num <= 24)
+        if (num <= 24)//Checks to see if it is greater than 24
             num++;
         else
             num = 25;
 
-        level.setText(Integer.toString(num));
+        level.setText(Integer.toString(num));//Sets the text field to the number
 
     }
 
@@ -441,21 +441,21 @@ public class SheetActivity5E extends Activity {
         TextView level = (TextView) findViewById(R.id.txtLevelNUM);
         levelValue = level.getText().toString();
 
-        int num = Integer.parseInt(levelValue);
+        int num = Integer.parseInt(levelValue);//Parses the number
 
-        if (num >= 2)
-            num--;
+        if (num >= 2)//Checks to see if the numberis greater than 2
+            num--;//Subtracts number
         else
             num = 1;
 
-        level.setText(Integer.toString(num));
+        level.setText(Integer.toString(num));//Sets the text field to the number
 
     }
     ////////////////////////////////////////////////////////////
 
     ////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////
-    //Race Selections
+    //Race Selections, sets the race text field to the selected race
     ////////////////////////////////////////////////////////////
     public void setElf(View view){
         TextView race = (TextView)findViewById(R.id.txtRaceField);
@@ -486,54 +486,54 @@ public class SheetActivity5E extends Activity {
     ////////////////////////////////////////////////////////////
 
     ////////////////////////////////////////////////////////////
-    //Class Selections
+    //Class Selections, all of these will set the race text field to the prope class
     ////////////////////////////////////////////////////////////
     public void setBarbarian(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Barbarian");
     }
     public void setBard(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Bard");
     }
     public void setCleric(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Cleric");
     }
     public void setDruid(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Druid");
     }
     public void setFighter(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Fighter");
     }
     public void setMonk(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Monk");
     }
     public void setPaladin(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Paladin");
     }
     public void setRanger(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Ranger");
     }
     public void setRogue(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Rogue");
     }
     public void setSorcerer(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Sorcerer");
     }
     public void setWarlock(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Warlock");
     }
     public void setWizard(View view){
-        TextView race = (TextView)findViewById(R.id.txtRaceField);
+        TextView race = (TextView)findViewById(R.id.classNameTxt);
         race.setText("Wizard");
     }
     ////////////////////////////////////////////////////////////

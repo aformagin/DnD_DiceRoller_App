@@ -3,6 +3,7 @@ package com.thirdspare.android.androidsheetsandroller;
 //This is the dice rolling class for the dice layout. Here will be the rolling functions for each type of die
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -248,5 +249,10 @@ public class DiceActivity extends Activity {
         ((TextView)findViewById(R.id.txtD20)).setText("0");
         // ((TextView)findViewById(R.id.txtD4M)).setText("0");
         // ((TextView)findViewById(R.id.txtD4)).setText("0");
+    }
+
+    public void showHelpScreen (View view){
+        Intent helpIntent = new Intent(this, HelpActivity.class);
+        startActivity(helpIntent);
     }
 }
